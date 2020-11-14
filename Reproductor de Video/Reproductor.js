@@ -38,4 +38,28 @@ function mover(e){
 		progreso.style.width=ratonX+'px';
 	}
 }
+function skip(value){
+		medio.currentTime += value;
+}
+function launchFullScreen(element) {
+  if(medio.requestFullScreen) {
+    medio.requestFullScreen();
+  } else if(medio.mozRequestFullScreen) {
+    medio.mozRequestFullScreen();
+  } else if(medio.webkitRequestFullScreen) {
+    medio.webkitRequestFullScreen();
+  }
+}
+
 window.addEventListener('load', iniciar, false);
+
+var oldvolume = 1;
+var audio = document.getElementById("volumen");
+
+audio.addEventListener("change",function(ev){
+	var v = document.getElementById("medio");
+	v.volume = ev.target.value;	
+	mute.checked=false;
+},true);
+	
+
