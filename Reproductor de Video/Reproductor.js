@@ -10,12 +10,12 @@ function iniciar() {
 function presionar(){
 	if(!medio.paused && !medio.ended) {
 		medio.pause();
-		reproducir.innerHTML='Reproducir';
+		reproducir.innerHTML='<img src="https://www.flaticon.es/svg/static/icons/svg/37/37499.svg" alt="imagen repro">';
 		window.clearInterval(bucle);
 	}
 		else{
 		medio.play();
-		reproducir.innerHTML='Pausa';
+		reproducir.innerHTML='<img src="https://img1.freepng.es/20180412/tqe/kisspng-computer-icons-linkedin-desktop-wallpaper-pause-button-5acf7aca32a460.0580339715235468262074.jpg" alt="img repro">' ;
 		bucle=setInterval(estado, 1000);
 	}
 }
@@ -56,10 +56,18 @@ window.addEventListener('load', iniciar, false);
 var oldvolume = 1;
 var audio = document.getElementById("volumen");
 
-audio.addEventListener("change",function(ev){
+mute.addEventListener("change",function(ev){
 	var v = document.getElementById("medio");
-	v.volume = ev.target.value;	
-	mute.checked=false;
+	/*v.volume = ev.target.value;
+	mute.checked=false; */
+	if (ev.target.checked) {
+		oldvolume = v.volume;		
+		v.volume = 0;
+		barra.value = 0;
+	} else {
+		v.volume = oldvolume;
+		barra.value = oldvolume;
+	}
 },true);
 	
 

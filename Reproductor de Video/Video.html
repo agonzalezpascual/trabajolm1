@@ -6,6 +6,7 @@
 		<script src="Reproductor.js"></script>
 	</head>
 	<body>
+		<br/><br/>
 		<section id="reproductor">
 			<video id="medio" width="720" height="400" poster="https://marketing4ecommerce.net/wp-content/uploads/2020/09/Ibai-Llanos-1280x720.jpg">
 				<source src="https://www.dropbox.com/s/5uldkhcspgcaz3y/Electric%20%20-%205%20Minute%20Countdown.mp4?dl=1">
@@ -14,19 +15,26 @@
 			</video>
 			<nav>
 				<div id="botones">
-					<button type="button" id="reproducir">Reproducir</button><br/>
-					<button onclick=skip(-5)>&lt;&lt;</button>
-					<button onclick=skip(5)>&gt;&gt;</button>
+					<button onclick=skip(-5)><img src="https://image.flaticon.com/icons/png/512/84/84226.png" alt=""></button>
+					<button type="button" id="reproducir"><img src="https://www.flaticon.es/svg/static/icons/svg/37/37499.svg" alt=""></button>
+					<button onclick=skip(5)><img src="https://image.flaticon.com/icons/png/512/83/83919.png" alt=""></button>
 					
 				</div>
 				<div id="barra">
 					<div id="progreso"></div>
 				</div>
 				<div id="Pcompleta">
-					<button onclick="launchFullScreen(document.documentElement);"> Entrar en pantalla completa </button>
+					<button onclick="launchFullScreen(document.documentElement);"><img src="https://image.flaticon.com/icons/png/512/67/67760.png" alt=""></button>
 				</div>
+				
+				
 				<div style="clear: both"></div>
 			</nav>
 		</section>
+
+		<section>
+			<br/> <br/>
+			<h1>REPRODUCTOR DE VIDEO</h1>
+		  </section>
 	</body>
 </html>
