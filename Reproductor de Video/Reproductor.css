@@ -6,7 +6,7 @@ header, section, footer, aside, nav, article, figure, figcaption, hgroup{
 	display : block;
 }
 #reproductor{
-	width: 750px;
+	width: 770px;
 	margin: 20px auto;
 	padding: 5px;
 	background: #222222;
@@ -39,8 +39,10 @@ button{
 }
 #botones{
 	float: left;
-	width: 100px;
-	height: 20px;	
+	width: 110px;
+	height: 20px;
+	margin-top:2px;
+	margin-right:3px;
 }
 #barra{
 	position: relative;

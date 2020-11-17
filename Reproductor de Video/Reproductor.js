@@ -1,53 +1,53 @@
 function iniciar() {
-	maximo=600;
-	medio=document.getElementById('medio');
-	reproducir=document.getElementById('reproducir');
-	barra=document.getElementById('barra'); 
-	progreso=document.getElementById('progreso');
+	maximo = 600;
+	medio = document.getElementById('medio');
+	reproducir = document.getElementById('reproducir');
+	barra = document.getElementById('barra'); 
+	progreso = document.getElementById('progreso');
 	reproducir.addEventListener('click', presionar, false);
 	barra.addEventListener('click', mover, false);
 }
-function presionar(){
-	if(!medio.paused && !medio.ended) {
+function presionar() {
+	if (!medio.paused && !medio.ended) {
 		medio.pause();
-		reproducir.innerHTML='<img src="https://www.flaticon.es/svg/static/icons/svg/37/37499.svg" alt="imagen repro">';
+		reproducir.innerHTML = 'Reproducir';
 		window.clearInterval(bucle);
 	}
-		else{
+		else {
 		medio.play();
-		reproducir.innerHTML='<img src="https://img1.freepng.es/20180412/tqe/kisspng-computer-icons-linkedin-desktop-wallpaper-pause-button-5acf7aca32a460.0580339715235468262074.jpg" alt="img repro">' ;
-		bucle=setInterval(estado, 1000);
+		reproducir.innerHTML = 'Pausa';
+		bucle = setInterval(estado, 1000);
 	}
 }
-function estado(){
-	if(!medio.ended){
-		var total=parseInt(medio.currentTime*maximo/medio.duration);
-		progreso.style.width=total+'px';
+function estado() {
+	if (!medio.ended) {
+		var total = parseInt(medio.currentTime * maximo / medio.duration);
+		progreso.style.width = total + 'px';
 	}
-		else{
-		progreso.style.width='0px';
-		reproducir.innerHTML='Reproducir';
+		else {
+		progreso.style.width = '0px';
+		reproducir.innerHTML = 'Reproducir';
 		window.clearInterval(bucle);
 	}
 }
-function mover(e){
-	if(!medio.ended){
-		var ratonX=e.pageX-barra.offsetLeft;
-		var nuevoTiempo=ratonX*medio.duration/maximo;
-		medio.currentTime=nuevoTiempo;
-		progreso.style.width=ratonX+'px';
+function mover(e) {
+	if (!medio.ended) {
+		var ratonX = e.pageX-barra.offsetLeft;
+		var nuevoTiempo = ratonX * medio.duration/maximo;
+		medio.currentTime = nuevoTiempo;
+		progreso.style.width = ratonX + 'px';
 	}
 }
-function skip(value){
+function skip(value) {
 		medio.currentTime += value;
 }
 function launchFullScreen(element) {
-  if(medio.requestFullScreen) {
-    medio.requestFullScreen();
-  } else if(medio.mozRequestFullScreen) {
-    medio.mozRequestFullScreen();
-  } else if(medio.webkitRequestFullScreen) {
-    medio.webkitRequestFullScreen();
+  if (medio.requestFullScreen) {
+    medio.requestFullScreen() ;
+  } else if (medio.mozRequestFullScreen) {
+    medio.mozRequestFullScreen() ;
+  } else if (medio.webkitRequestFullScreen) {
+    medio.webkitRequestFullScreen() ;
   }
 }
 
@@ -56,18 +56,10 @@ window.addEventListener('load', iniciar, false);
 var oldvolume = 1;
 var audio = document.getElementById("volumen");
 
-mute.addEventListener("change",function(ev){
+audio.addEventListener("change",function(ev) {
 	var v = document.getElementById("medio");
-	/*v.volume = ev.target.value;
-	mute.checked=false; */
-	if (ev.target.checked) {
-		oldvolume = v.volume;		
-		v.volume = 0;
-		barra.value = 0;
-	} else {
-		v.volume = oldvolume;
-		barra.value = oldvolume;
-	}
+	v.volume = ev.target.value;	
+	mute.checked = false;
 },true);
 	
 
