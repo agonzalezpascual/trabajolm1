@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio grupal</title>
+        <style>
+            
+            td{
+               height: 10px;
+               width: 15px; 
+            }
+            #Texto{
+                width: 500px;
+            }
+            #Total{
+                width: 600px;
+                height: 70px;
+            }
+            #CajaTotal{
+                border: 2px solid;
+            }
+            body{
+                font-family: Arial;
+            
+            }
+            input[type="radio"]{
+                box-sizing: border-box;
+                appearance: none;
+                background: white;
+                outline: 2px solid #333;
+                border: 3px solid white;
+                width: 20px;
+                height: 20px;
+            }
+            input[type="radio"]:checked{
+                background: #333;
+            }
+        </style>
+    </head>
+<body>
+
+<script>
+
+    function cuentaA(){
+        var check = document.getElementsByClassName("A");
+        var cant = check.length;
+        var contA = 0;
+        for (var i =0; i < cant; i++){
+            if (check[i].checked){
+                contA++
+            }
+        }
+        document.getElementById("demoA").innerHTML = contA;
+    }
+    function cuentaB(){
+        var check = document.getElementsByClassName("B");
+        var cant = check.length;
+        var contB = 0;
+        for (var i =0; i < cant; i++){
+            if (check[i].checked){
+                contB++
+            }
+        }
+        document.getElementById("demoB").innerHTML = contB;
+    }
+    function cuentaC(){
+        var check = document.getElementsByClassName("C");
+        var cant = check.length;
+        var contC = 0;
+        for (var i =0; i < cant; i++){
+            if (check[i].checked){
+                contC++
+            }
+        }
+        document.getElementById("demoC").innerHTML = contC;
+    }
+    function cuentaD(){
+        var check = document.getElementsByClassName("D");
+        var cant = check.length;
+        var contD = 0;
+        for (var i =0; i < cant; i++){
+            if (check[i].checked){
+                contD++
+            }
+        }
+        document.getElementById("demoD").innerHTML = contD;
+    }
+</script>
+
+<div onchange="cuentaA()">
+<div onchange="cuentaB()">
+<div onchange="cuentaC()">
+<div onchange="cuentaD()">
+
+
+<table name = "Tabla1" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta1" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Directo/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta1" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Hablador/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta1" class="C" /></td>
+        <td></td>
+        <td id="Texto">Suave</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta1" class="D" /></td>
+        <td id="Texto">Primero analizzo cuidadosamente las situaciones</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla2" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta2" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Atrevido/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta2" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Me entusiasmo con facilidad</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta2" class="C" /></td>
+        <td></td>
+        <td id="Texto">Tiendo a no participar activamente</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta2" class="D" /></td>
+        <td id="Texto">Me gusta que todo esté bien organizado</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla3" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta3" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Contundente</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta3" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Persuasivo/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta3" class="C" /></td>
+        <td></td>
+        <td id="Texto">Simpático/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta3" class="D" /></td>
+        <td id="Texto">Exacto/a</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla4" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta4" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Innovador/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta4" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Creativo/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta4" class="C" /></td>
+        <td></td>
+        <td id="Texto">Parte de un equipo</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta4" class="D" /></td>
+        <td id="Texto">Preciso</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla5" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta5" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Competitivo/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta5" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Optimista</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta5" class="C" /></td>
+        <td></td>
+        <td id="Texto">Sereno/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta5" class="D" /></td>
+        <td id="Texto">Tradicional, las cosas como siempre</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla6" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta6" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Decidido/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta6" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Encantador/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta6" class="C" /></td>
+        <td></td>
+        <td id="Texto">Primero pienso y luego actúo.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta6" class="D" /></td>
+        <td id="Texto">Madura/o</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla7" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta7" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Solucionador/a de problemas</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta7" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Popular</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta7" class="C" /></td>
+        <td></td>
+        <td id="Texto">Sincero/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta7" class="D" /></td>
+        <td id="Texto">Objetivo</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla8" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta8" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Agresiva/o</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta8" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Segura/o de mi misma/o</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta8" class="C" /></td>
+        <td></td>
+        <td id="Texto">Tengo mucha paciencia</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta8" class="D" /></td>
+        <td id="Texto">Perfeccionista en lo que hago</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla9" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta9" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Persistente</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta9" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Abierta/o</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta9" class="C" /></td>
+        <td></td>
+        <td id="Texto">Posesiva/o</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta9" class="D" /></td>
+        <td id="Texto">Necesito tiempo</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla10" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta10" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Exigente</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta10" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Sociable</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta10" class="C" /></td>
+        <td></td>
+        <td id="Texto">Amable</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta10" class="D" /></td>
+        <td id="Texto">Reflexivo/a</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla11" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta11" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Impaciente</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta11" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Impulsiva/o</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta11" class="C" /></td>
+        <td></td>
+        <td id="Texto">Tranquila/o</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta11" class="D" /></td>
+        <td id="Texto">Metódico/a</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla12" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta12" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Dominante</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta12" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Confiado/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta12" class="C" /></td>
+        <td></td>
+        <td id="Texto">Compresivo/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta12" class="D" /></td>
+        <td id="Texto">Buscador de datos</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla13" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta13" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Asumo riesgos</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta13" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Me relaciono bien</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta13" class="C" /></td>
+        <td></td>
+        <td id="Texto">Relajado/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta13" class="D" /></td>
+        <td id="Texto">Siempre me pongo el listón alto</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla14" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta14" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Con iniciativa</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta14" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Generoso/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta14" class="C" /></td>
+        <td></td>
+        <td id="Texto">Estable</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta14" class="D" /></td>
+        <td id="Texto">Educada/o</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla15" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta15" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Aventurero/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta15" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Convenzo fácilmente a los demás</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta15" class="C" /></td>
+        <td></td>
+        <td id="Texto">Sé escuchar</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta15" class="D" /></td>
+        <td id="Texto">Rígido</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla16" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta16" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Autoritario/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta16" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Me emocion fácilmente</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta16" class="C" /></td>
+        <td></td>
+        <td id="Texto">Me gusta complacer a los demas</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta16" class="D" /></td>
+        <td id="Texto">Comedido/a</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla17" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta17" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Inquisitivo/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta17" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Emprendedor/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta17" class="C" /></td>
+        <td></td>
+        <td id="Texto">Me cuesta mostrame tal y como soy</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta17" class="D" /></td>
+        <td id="Texto">Lógico/a</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla18" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta18" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Rápido/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta18" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Agradable</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta18" class="C" /></td>
+        <td></td>
+        <td id="Texto">Pasivo/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta18" class="D" /></td>
+        <td id="Texto">Cuidadoso/a</td>
+    </tr>
+</table>
+
+<br/>
+
+<table name = "Tabla19" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <td>A<input type="radio" name="Pregunta19" class="A" /></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Me encantan los retos</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>B<input type="radio" name="Pregunta19" class="B" /></td>
+        <td></td>
+        <td></td>
+        <td id="Texto">Efusivo/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>C<input type="radio" name="Pregunta19" class="C" /></td>
+        <td></td>
+        <td id="Texto">Bueno/a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D<input type="radio" name="Pregunta19" class="D" /></td>
+        <td id="Texto">Reservado/a</td>
+    </tr>
+</table>
+
+<br/>
+
+<table id="Total" border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+        <th colspan="8" id="CajaTotal"><b>TOTALES</b></th>
+    </tr>
+    <tr>
+        <td align="center"><b>A</b></td>
+        <td align="center" id="demoA"></td>
+        <td align="center"><b>B</b></td>
+        <td align="center" id="demoB"></td>
+        <td align="center"><b>C</b></td>
+        <td align="center" id="demoC"></td>
+        <td align="center"><b>D</b></td>
+        <td align="center" id="demoD"></td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
