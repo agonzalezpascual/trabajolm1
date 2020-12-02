@@ -15,7 +15,6 @@
         width: 100%;
 		height: 100%;
         margin: 20px auto;
-        padding: 5px;
         background: #222222;
         border: 1px solid #313131;
         -moz-border-radius: 5px;
@@ -34,13 +33,12 @@
     }
     video{
         border-radius: 15px;
-		position:relative;
-		height:100%;
-		width:100%;
+		position: relative;
+		height:400px;
+		width:720px;
 		top:0px;
 		left:0px;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: 33%;
     }
     #idreproductor{
         color: lavender;
@@ -232,6 +230,14 @@
 	div#video {
 		overflow: hidden;
 	}
+	@media screen and (max-width: 1024px) {
+		video{
+			border-radius: 15px;
+			height:100%;
+			width:100%;
+			margin-left: 0%;
+		}
+	}
 </style>
 
 <script>
@@ -354,7 +360,7 @@
         <br/><br/><br/>
         <section>
             <br/>
-            <video id="medio" width="720" height="400" controls poster="https://images-ext-1.discordapp.net/external/mnWMVI048TqSok8Ro54a1YWB8gFsqupTCTD2MN4sIxc/https/lh3.ggpht.com/OOXV4V9YyovafA10xZhq0QgWNwFwCEhMI9kWJ2FDkjMmLa7rDWJmSmnsgOtMWdDGg3A%3Dw300" alt="Tu navegador no reconoce ningún formato de vídeo">
+            <video id="medio" controls poster="https://images-ext-1.discordapp.net/external/mnWMVI048TqSok8Ro54a1YWB8gFsqupTCTD2MN4sIxc/https/lh3.ggpht.com/OOXV4V9YyovafA10xZhq0QgWNwFwCEhMI9kWJ2FDkjMmLa7rDWJmSmnsgOtMWdDGg3A%3Dw300" alt="Tu navegador no reconoce ningún formato de vídeo">
             <source src="https://www.dropbox.com/s/gdon4pgqg9w4zw7/Video%20Curr%C3%ADculum%20IHG.mp4?dl=1">
             <source src="https://www.dropbox.com/s/lmldmgersvfz8zx/Video%20Curr%C3%ADculum%20IHG.webm?dl=1">
             </video>
